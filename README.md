@@ -32,4 +32,6 @@ THEN I am presented with empty fields to enter a new note title and the note’s
 - Node.js
 - Heroku
 
-## Contact
+## Deployed On Heroku
+
+Click to view deployed application <a href="https://notetaker3589000.herokuapp.com/">Heroku.</a>
