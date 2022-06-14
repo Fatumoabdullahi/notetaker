@@ -4,7 +4,6 @@ const fs = require("fs");
 const uuid = require("uuid");
 
 router.get("/api/notes", (req, res) => {
-  // res.sendFile(path.join(__dirname, "/db/db.json"))
   fs.readFile("db/db.json", "utf-8", (err, data) => {
     if (err) {
       console.log(err);
@@ -14,7 +13,6 @@ router.get("/api/notes", (req, res) => {
   });
 });
 
-// Post function to add new notes to db.json
 router.post("/api/notes", (req, res) => {
   const notes = JSON.parse(fs.readFileSync("./db/db.json"));
   const newNotes = req.body;
@@ -24,7 +22,6 @@ router.post("/api/notes", (req, res) => {
   res.json(notes);
 });
 
-//used for deleting notes
 router.delete("/api/notes/:id", (req, res) => {
   const notes = JSON.parse(fs.readFileSync("./db/db.json"));
   const delNote = notes.filter((rmvNote) => rmvNote.id !== req.params.id);
