@@ -1,5 +1,9 @@
 # Notetaker
 
+## Usage
+
+Enter 'npm satrt' into the terminal to run application.
+
 ## User Story
 
 AS A small business owner
